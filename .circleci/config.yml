@@ -14,7 +14,7 @@ jobs:
           command: MODULE_CI_JOB='test' python3 orchestrate.py
       - run:
           name: destroy
-          command: cd ~ && ~/bin/destroy.sh && ~/bin/destroy_s3_buckets.sh # must succeed or we have something to clean up manually
+          command: cd ~ && ~/bin/destroy.sh && ~/bin/destroy_s3_buckets.sh # must succeed or we have something to clean up manually ##
           when: always
       - persist_to_workspace:
           root: ~/workspace
